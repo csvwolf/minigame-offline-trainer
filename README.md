@@ -4,6 +4,13 @@
 
 仓库包含技能正文与参考文档，不包含游戏包、游戏资源、用户存档、签名密钥或现成的通用修改器。安装技能后，仍需由助手结合具体游戏、可用工具和研究材料开展工作；不能保证任意游戏都可完整离线。
 
+## 在线课件与口播稿
+
+- [打开网页课件](https://csvwolf.github.io/minigame-offline-trainer/)：面向新手介绍安装、环境准备、快速使用、踩坑建议，并在后半部分解释实现原理与验证方法。
+- [逐页口播稿](https://csvwolf.github.io/minigame-offline-trainer/narration.md) · [纯口播稿](https://csvwolf.github.io/minigame-offline-trainer/narration.txt) · [课件操作说明](https://csvwolf.github.io/minigame-offline-trainer/usage.txt)
+
+课件单独存放在 `gh-pages` 发布分支。**安装技能请使用默认的 `main` 分支**；技能目录不附带课件、讲稿或网站文件。通过 Git 安装且希望只获取技能分支时，可在下方 `git clone` 命令加入 `--single-branch --branch main`。
+
 ## 适用场景
 
 - 采集小游戏的客户端代码与资源，识别 Unity WebGL / IL2CPP、Cocos 等引擎线索。
@@ -33,7 +40,7 @@ macOS / Linux：
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
-git clone https://github.com/csvwolf/minigame-offline-trainer.git \
+git clone --single-branch --branch main https://github.com/csvwolf/minigame-offline-trainer.git \
   "$HOME/.agents/skills/minigame-offline-trainer"
 ```
 
@@ -41,7 +48,7 @@ Windows PowerShell：
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME/.agents/skills" | Out-Null
-git clone https://github.com/csvwolf/minigame-offline-trainer.git "$HOME/.agents/skills/minigame-offline-trainer"
+git clone --single-branch --branch main https://github.com/csvwolf/minigame-offline-trainer.git "$HOME/.agents/skills/minigame-offline-trainer"
 ```
 
 需要预先安装 Git。如果目标目录已有同名技能，先核对其来源与本地修改，不要直接覆盖或重复安装。
@@ -51,7 +58,7 @@ git clone https://github.com/csvwolf/minigame-offline-trainer.git "$HOME/.agents
 在目标项目的根目录运行：
 
 ```bash
-git clone https://github.com/csvwolf/minigame-offline-trainer.git \
+git clone --single-branch --branch main https://github.com/csvwolf/minigame-offline-trainer.git \
   .agents/skills/minigame-offline-trainer
 ```
 
